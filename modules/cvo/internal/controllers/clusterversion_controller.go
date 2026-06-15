@@ -33,7 +33,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 
-	cfov1 "github.com/BetaWater/cluster-api-provider-baremetal/modules/cvo/api/v1beta1"
+	cfov1 "github.com/BetaWater/cluster-api-provider-baremetal/modules/cvo/api/v1beta2"
 	"github.com/BetaWater/cluster-api-provider-baremetal/modules/cvo/internal/addon"
 	"github.com/BetaWater/cluster-api-provider-baremetal/modules/cvo/internal/upgrader"
 	"github.com/BetaWater/cluster-api-provider-baremetal/modules/cvo/internal/upgrader/metrics"

@@ -36,7 +36,7 @@ import (
 
 	capbmv1 "github.com/BetaWater/cluster-api-provider-baremetal/modules/capbm/api/v1beta2"
 	
-	cfov1 "github.com/BetaWater/cluster-api-provider-baremetal/modules/cvo/api/v1beta1"
+	cfov1 "github.com/BetaWater/cluster-api-provider-baremetal/modules/cvo/api/v1beta2"
 	"github.com/BetaWater/cluster-api-provider-baremetal/modules/capbm/internal/bootstrap"
 	"github.com/BetaWater/cluster-api-provider-baremetal/modules/capbm/internal/cni"
 	"github.com/BetaWater/cluster-api-provider-baremetal/modules/capbm/internal/csi"

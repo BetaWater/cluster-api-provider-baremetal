@@ -29,7 +29,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/yaml"
 
-	cfov1 "github.com/BetaWater/cluster-api-provider-baremetal/modules/cvo/api/v1beta1"
+	cfov1 "github.com/BetaWater/cluster-api-provider-baremetal/modules/cvo/api/v1beta2"
 )
 
 // Installer is the interface for installing addons.

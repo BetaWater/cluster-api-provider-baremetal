@@ -22,7 +22,7 @@ import (
 	"os"
 	"time"
 
-	cfov1 "github.com/BetaWater/cluster-api-provider-baremetal/modules/cvo/api/v1beta1"
+	cfov1 "github.com/BetaWater/cluster-api-provider-baremetal/modules/cvo/api/v1beta2"
 	capbmssh "github.com/BetaWater/cluster-api-provider-baremetal/modules/cvo/pkg/ssh"
 	corev1 "k8s.io/api/core/v1"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"

@@ -17,7 +17,7 @@ limitations under the License.
 package upgrader
 
 import (
-	cfov1 "github.com/BetaWater/cluster-api-provider-baremetal/modules/cvo/api/v1beta1"
+	cfov1 "github.com/BetaWater/cluster-api-provider-baremetal/modules/cvo/api/v1beta2"
 )
 
 // ComponentDiff records component version changes between two ReleaseImages.

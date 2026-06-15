@@ -14,7 +14,7 @@ spec:
     singular: clusterversion
   scope: Namespaced
   versions:
-  - name: v1beta1
+  - name: v1beta2
     schema:
       openAPIV3Schema:
         description: ClusterVersion is the Schema for the clusterversions API.
@@ -95,6 +95,11 @@ spec:
                   version:
                     type: string
                 type: object
+              paused:
+                description: |-
+                  Paused indicates whether the upgrade is paused.
+                  When true, the controller will not proceed with the upgrade.
+                type: boolean
             required:
             - clusterRef
             type: object

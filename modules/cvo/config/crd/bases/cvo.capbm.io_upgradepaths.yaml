@@ -14,7 +14,7 @@ spec:
     singular: upgradepath
   scope: Namespaced
   versions:
-  - name: v1beta1
+  - name: v1beta2
     schema:
       openAPIV3Schema:
         description: UpgradePath is the Schema for the upgradepaths API.
