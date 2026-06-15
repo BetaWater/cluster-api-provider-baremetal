@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2024 The CAPBM Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -201,7 +201,7 @@ INSTALL_SOURCE="${INSTALL_SOURCE:-online}"
 RELEASE_SERVER="${RELEASE_SERVER:-}"
 LOCAL_PATH="${LOCAL_PATH:-}"
 
-echo "=== CNI 安装开�?(type=$CNI_TYPE, version=$CNI_VERSION, source=$INSTALL_SOURCE) ==="
+echo "=== CNI 安装开�?(type=$CNI_TYPE, version=$CNI_VERSION, source=$INSTALL_SOURCE) ==="
 
 fetch_resource() {
     local resource="$1"
@@ -210,7 +210,7 @@ fetch_resource() {
         online) curl -fsSL "$resource" -o "$dest" ;;
         http)   curl -fsSL "${RELEASE_SERVER}/${resource}" -o "$dest" ;;
         local)  cp "${LOCAL_PATH}/${resource}" "$dest" ;;
-        *)      echo "ERROR: 不支持的安装�? $INSTALL_SOURCE"; exit 1 ;;
+        *)      echo "ERROR: 不支持的安装�? $INSTALL_SOURCE"; exit 1 ;;
     esac
 }
 
@@ -232,7 +232,7 @@ install_cni_plugins() {
     esac
     tar -C /opt/cni/bin -xzf "$archive"
     rm -f "$archive"
-    echo "CNI 二进制插件安装完�?
+    echo "CNI 二进制插件安装完�?
 }
 
 install_calico() {
@@ -333,7 +333,7 @@ install_flannel() {
 }
 
 verify_cni() {
-    [ -d "/opt/cni/bin" ] && [ -n "$(ls -A /opt/cni/bin 2>/dev/null)" ] && echo "CNI 二进�? OK" || { echo "ERROR: /opt/cni/bin 为空"; return 1; }
+    [ -d "/opt/cni/bin" ] && [ -n "$(ls -A /opt/cni/bin 2>/dev/null)" ] && echo "CNI 二进�? OK" || { echo "ERROR: /opt/cni/bin 为空"; return 1; }
     [ -d "/etc/cni/net.d" ] && [ -n "$(ls -A /etc/cni/net.d 2>/dev/null)" ] && echo "CNI 配置: OK" || { echo "ERROR: /etc/cni/net.d 为空"; return 1; }
     local status=$(kubectl get node $(hostname) -o jsonpath='{.status.conditions[?(@.type=="Ready")].status}' 2>/dev/null || echo "Unknown")
     [ "$status" = "True" ] && echo "Node Ready: OK" || echo "WARNING: Node 尚未 Ready"
